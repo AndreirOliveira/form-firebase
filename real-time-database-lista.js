@@ -8,7 +8,7 @@ firebase.database().ref('usuarios').on('value', function (snapshot){
 
     snapshot.forEach(function(item){
           var listHtml = '<tr>';
-            listHtml += '<th scope="row" class="id-column">'+item.key().key+'</th>';
+            listHtml += '<th scope="row" class="id-column">'+item.key+'</th>';
             listHtml += '<td>'+ item.val().name +'</td>';
             listHtml += '<td>'+ item.val().age +'</td>';
             listHtml += '<td class="text-center action-column">';
